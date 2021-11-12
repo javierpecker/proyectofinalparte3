@@ -1,0 +1,82 @@
+[
+	{
+		"_id": "1",
+		"timestamp": "26/08/2021 12:08:22",
+		"nombre": "lapiz",
+		"description": "sirve para escribir",
+		"codigo": 5555,
+		"foto": "https://",
+		"precio": 200,
+		"stock": 3
+	},
+	{
+		"_id": "2",
+		"timestamp": "26/08/2021 12:08:22",
+		"nombre": "cartuchera",
+		"description": "sirve para escribir",
+		"codigo": 1223,
+		"foto": "https://",
+		"precio": 200,
+		"stock": 3
+	},
+	{
+		"_id": "3",
+		"timestamp": "26/08/2021 12:08:22",
+		"nombre": "prueba",
+		"description": "prueba",
+		"codigo": 22333,
+		"foto": "https://",
+		"precio": 23,
+		"stock": 12
+	},
+	{
+		"_id": "4",
+		"timestamp": "20/09/2021 01:09:37",
+		"nombre": "AGREGANDO PRODUCTO2",
+		"precio": 23,
+		"description": "azul",
+		"codigo": 22337,
+		"foto": "https://",
+		"stock": 12
+	},
+	{
+		"_id": "5",
+		"timestamp": "20/09/2021 01:09:37",
+		"nombre": "AGREGANDO PRODUCTO2",
+		"precio": 23,
+		"description": "azul",
+		"codigo": 22337,
+		"foto": "https://",
+		"stock": 12
+	},
+	{
+		"_id": "6",
+		"timestamp": "20/09/2021 01:09:37",
+		"nombre": "AGREGANDO PRODUCTO2",
+		"precio": 23,
+		"description": "azul",
+		"codigo": 22337,
+		"foto": "https://",
+		"stock": 12
+	},
+	{
+		"_id": "7",
+		"timestamp": "20/09/2021 01:09:37",
+		"nombre": "AGREGANDO PRODUCTO2",
+		"precio": 23,
+		"description": "azul",
+		"codigo": 22337,
+		"foto": "https://",
+		"stock": 12
+	},
+	{
+		"_id": "8",
+		"timestamp": "20/09/2021 01:09:37",
+		"nombre": "AGREGANDO PRODUCTO2",
+		"precio": 23,
+		"description": "azul",
+		"codigo": 22337,
+		"foto": "https://",
+		"stock": 12
+	}
+]
