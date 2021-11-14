@@ -7,6 +7,7 @@ import {
   ProductQuery,
 } from '../products.interface';
 import Config from '../../../config';
+import { Logger } from '../../../services/logger';
 
 let setTime : string = moment(new Date()).format("DD/MM/YYYY HH:MM:SS");
 
@@ -39,6 +40,7 @@ export class ProductosAtlasDAO implements ProductBaseClass {
         const document = await this.productos.findById(id);
         if (document) output.push(document);
       } else {
+        Logger.info(await this.productos.find());
         output = await this.productos.find();
       }
 
