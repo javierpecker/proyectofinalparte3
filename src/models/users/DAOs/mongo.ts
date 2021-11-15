@@ -2,6 +2,7 @@ import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
 import { NewUserI, UserI, UserBaseClass, UserQuery } from '../users.interface';
 import Config from '../../../config';
+import { Logger } from '../../../services/logger';
 
 const usersSchema = new mongoose.Schema<UserI>({
   username: {
@@ -26,6 +27,18 @@ const usersSchema = new mongoose.Schema<UserI>({
     type: String,
     required: true,
   },
+  address: {
+    type: String,
+    required: true,
+  },
+  avatar: {
+    type: String,
+    required: true,
+  },
+  phoneNumber: {
+  type: String,
+  required: true,
+ },
 });
 
 usersSchema.pre('save', async function (next) {
@@ -85,10 +98,11 @@ export class UsuariosAtlasDAO implements UserBaseClass {
   }
 
   async validateUserPassword(
-    username: string,
+    email: string,
     password: string
   ): Promise<boolean> {
-    const user = await this.users.findOne({ username });
+    const user = await this.users.findOne({ email });
+    Logger.info(user)
 
     if (!user) return false;
 

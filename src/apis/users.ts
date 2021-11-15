@@ -36,20 +36,20 @@ class User {
     //Borrar carrito tambien
   }
 
-  async query(username?: string, email?: string): Promise<UserI> {
+  async query(email?: string): Promise<UserI> {
     const query = {
       $or: [] as UserQuery[],
     };
 
-    if (username) query.$or.push({ username });
+    //if (username) query.$or.push({ username });
 
     if (email) query.$or.push({ email });
 
     return this.users.query(query);
   }
 
-  async ValidatePassword(username: string, password: string) {
-    return this.users.validateUserPassword(username, password);
+  async ValidatePassword(email: string, password: string) {
+    return this.users.validateUserPassword(email, password);
   }
 }
 

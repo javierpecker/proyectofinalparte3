@@ -5,8 +5,11 @@ const PASS_RE = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
 export const userJoiSchema = Joi.object({
   firstName: Joi.string().min(4).max(15).required(),
   lastName: Joi.string().min(4).max(15).required(),
+  address: Joi.string().min(4).max(50).required(),
+  phoneNumber: Joi.string().min(8).max(15).required(),
+  avatar: Joi.string().min(10).max(500),
   email: Joi.string().email().required(),
-  username: Joi.string().min(5).max(10).required(),
+  username: Joi.string().min(5).max(15).required(),
   password: Joi.string().regex(PASS_RE).required(),
 });
 
@@ -20,11 +23,14 @@ export interface NewUserI {
 
 export interface UserI {
   _id: string;
+  address: string;
+  avatar: string;
   firstName: string;
   lastName: string;
   email: string;
   username: string;
   password: string;
+  phoneNumber: string;
 }
 
 export interface UserQuery {

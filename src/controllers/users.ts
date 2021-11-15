@@ -8,9 +8,9 @@ class User {
     try {
       await userJoiSchema.validateAsync(req.body);
 
-      const { username, email } = req.body;
+      const { email } = req.body;
 
-      const user = await UserAPI.query(username, email);
+      const user = await UserAPI.query(email);
       if (!user) next();
       else res.status(400).json({ msg: 'invalid username or email' });
     } catch (err) {
