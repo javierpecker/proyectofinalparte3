@@ -64,7 +64,7 @@ const signUpFunc: VerifyFunctionWithRequest = async (
     const user = await UserAPI.query(username, email);
 
     if (user) {
-      Logger.warn(
+      Logger.info(
         `Signup Fail for username ${username}: Username or email already exists`
       );
       return done(null, {
